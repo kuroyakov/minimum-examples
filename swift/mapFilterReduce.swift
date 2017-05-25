@@ -1,13 +1,16 @@
 // Map, Filter, Reduce
 import Foundation       // NSDate
 
-let start = Date()
 
-let result = 
+let a = 
     // 1. Generating sequence
-    (0..<10000000)
+    (0..<10000000).map { $0 }
+
+let start = Date()
+// Stopwatch start after generating sequence
+let result =
     // 2. Mapping the sequence into another
-    .map {$0*2}
+    a.map {$0*2}
     // 3. Filtering the sequence
     .filter {$0 % 3 == 0}
     // 4. Reducing the sequence

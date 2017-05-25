@@ -4,10 +4,14 @@ open System
 open System.Diagnostics
 
 let sw = Stopwatch()
+let a = 
+    // 1. Generating sequence (Defered execution)
+    [|0L..10000000L|]
+
+ // Stopwatch start after generating sequence
 sw.Start()
 let result = 
-    // 1. Generating sequence (Defered execution)
-    seq{0L..10000000L}
+    a
     // 2. Mapping the sequence into another (Defered execution)
     |> Seq.map ((*) 2L)
     // 3. Filtering the sequence (Defered execution)
@@ -19,5 +23,3 @@ sw.Stop()
 // As a result
 printfn "%A" result
 printfn "%A [msec]" sw.Elapsed.TotalMilliseconds
-
-    

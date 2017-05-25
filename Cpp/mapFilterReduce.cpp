@@ -10,11 +10,12 @@
 using namespace std;
 
 int main(){
-    auto start = chrono::system_clock::now();
     // 1. Generating sequence
     auto a = vector<long long>(10000000);
-    for (long long i; i < a.size(); ++i) a[i] = i;
+    for (long long i=0; i < a.size(); ++i) a[i] = i;
 
+    // Stopwatch start after generating sequence
+    auto start = chrono::system_clock::now();
     // 2. Mapping the sequence into another
     auto mapped = vector<long long>(10000000);
     transform(a.begin(), a.end(), mapped.begin(), [](long long x){return x * 2;});

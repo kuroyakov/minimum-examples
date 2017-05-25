@@ -2,13 +2,15 @@
 // To increse VM heap size, set environment variable JAVA_OPTS 
 // (For example: 'export JAVA_OPTS="$JAVA_OPTS -Xmx1024M"')
 fun main(args:Array<String>){
+    var a = 
+        // 1. Generating sequence
+        IntArray(10000000) { it }
+
+    // Stopwatch start after generating sequence
     var start = System.currentTimeMillis()
     var result = 
-        // 1. Generating sequence
-        Array(10000000, {i->i})
-
         // 2. Mapping the sequence into another
-        .map { n -> n * 2}
+        a.map { n -> n * 2}
 
         // 3. Filtering the sequence
         .filter { n -> n%3 == 0}

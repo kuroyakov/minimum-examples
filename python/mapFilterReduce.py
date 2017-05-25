@@ -2,9 +2,11 @@
 import functools            # for reduce function
 import time                 # for evaluation performance
 
-ts = time.time()
 # 1. Generating sequence (Defered execution)
-a = range(10000000)
+a = list(range(10000000))
+
+# Stopwatch start after generating sequence
+ts = time.time()
 
 # 2. Mapping the sequence into another (Defered execution)
 mapped = map(lambda n:n*2, a)

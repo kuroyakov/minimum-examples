@@ -1,11 +1,13 @@
 // Map, Filter, Reduce
-console.time("All");
 
 // 1. Generating sequence
 var a = new Array(10000000);
 for (var index = 0; index < a.length; index++) {
     a[index] = index;
 }
+
+// Stopwatch start after generating sequence
+console.time("All");
 // 2. Mapping the sequence into another
 var mapped = a.map(n=>n*2);
 
