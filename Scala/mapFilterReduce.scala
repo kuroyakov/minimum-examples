@@ -9,7 +9,7 @@ object MapFilterReduce extends App{
     // 3. Filtering the sequence (Defered execution)
                   .filter(_%3==0)
     // 4. Reducing the sequence
-                  .fold(0L)((z, x) => z + x)
+                  .fold(0L)(_+_)
 
                   
     var end = System.currentTimeMillis
