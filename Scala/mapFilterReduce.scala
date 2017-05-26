@@ -4,14 +4,14 @@ object MapFilterReduce extends App{
     val a = (0L to 9999999L).toArray
     // Stopwatch start after generating sequence
     var start = System.currentTimeMillis
-    // 2. Mapping the sequence into another (Defered execution)
-    var result = a.map(_*2)
-    // 3. Filtering the sequence (Defered execution)
-                  .filter(_%3==0)
-    // 4. Reducing the sequence
-                  .fold(0L)(_+_)
+    var result = 
+        // 2. Mapping the sequence into another (Defered execution)
+        a.map(_*2)
+        // 3. Filtering the sequence (Defered execution)
+        .filter(_%3==0)
+        // 4. Reducing the sequence
+        .fold(0L)(_+_)
 
-                  
     var end = System.currentTimeMillis
     // As a result
     println(result)
