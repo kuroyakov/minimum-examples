@@ -2,7 +2,7 @@
 import functools            # for reduce function
 import time                 # for evaluation performance
 
-# 1. Generating sequence (Defered execution)
+# 1. Generating sequence
 a = list(range(10000000))
 
 # Stopwatch start after generating sequence

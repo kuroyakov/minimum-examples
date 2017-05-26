@@ -5,7 +5,7 @@ open System.Diagnostics
 
 let sw = Stopwatch()
 let a = 
-    // 1. Generating sequence (Defered execution)
+    // 1. Generating sequence
     [|0L..10000000L|]
 
  // Stopwatch start after generating sequence

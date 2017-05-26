@@ -1,6 +1,6 @@
 // Map, Filter, Reduce
 object MapFilterReduce extends App{
-    // 1. Generating sequence (Defered execution)
+    // 1. Generating sequence
     val a = (0L to 9999999L).toArray
     // Stopwatch start after generating sequence
     var start = System.currentTimeMillis
